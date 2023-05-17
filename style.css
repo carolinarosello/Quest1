@@ -1,0 +1,150 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+body{
+    background: hsl(257, 40%, 49%) url(images/bg-desktop.svg);
+    background-size: cover;
+    max-width: 1440px;
+    height: 850px;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    display: grid;
+    grid-template-areas: "header header"
+                         "principal principal"
+                         "footer footer";
+}
+
+header {
+    grid-area: header;
+    padding-top: 30px;
+}
+
+
+.principal {
+    grid-area: principal;
+    display: flex;
+}
+
+.informacoes{
+    padding: 50px;
+    color: white;
+    width: 100%;
+}
+
+.informacoes h1{
+    font-size: 50px;
+}
+
+.informacoes p{
+    font-size: 20px;
+}
+
+.btn{
+    padding-top: 20px;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 40px;
+    border-style: none;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.179);
+}
+
+.informacoes a{
+    text-decoration: none;
+    font-family: 'Poppins';
+    border-radius: 40px;
+    padding: 10px 40px;
+    font-size: 18px;
+}
+.informacoes button:hover {
+    background-color: hsl(300, 69%, 71%);
+    transition: 0.8s;
+    
+}
+.informacoes a:hover{
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    text-align: end;
+    font-size: 35px;
+    padding-right: 40px;
+}
+
+footer li{
+    display: inline-block;
+}
+
+footer i{
+    color: white;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+footer i:hover{
+    color: hsl(300, 69%, 71%);
+}
+
+
+@media (max-width:375px) {
+    body{
+        background-image: url(images/bg-mobile.svg);
+        background-size: cover;
+        max-width: 375px;
+    }
+
+    header{
+        max-width: 375px;
+        height: 5px;
+    }
+
+    header img{
+        width: 180px;
+    }
+    .principal{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       max-width: 375px;
+    }
+
+    .principal img{
+        width: 300px;
+    }
+
+    .principal .informacoes{
+        text-align: center;
+        padding: 0;
+    }
+
+    .principal h1{
+        font-size: 25px;
+        font-family: 'Open Sans';
+    }
+
+    .principal p{
+        font-size: 15px;
+        padding: 30px;
+    }
+    footer{
+        display: flex;
+        padding: 0;
+        justify-content: space-around;
+        font-size: 15px;
+    
+    }
+     
+    .informacoes a{
+    font-size: 15px;
+        
+    }
+}
